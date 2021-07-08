@@ -1,3 +1,6 @@
+import sys
+
+sys.setrecursionlimit(10 ** 9)
 n = int(input())
 arr = []
 for i in range(n):
