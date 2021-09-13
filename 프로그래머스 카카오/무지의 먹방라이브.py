@@ -21,32 +21,6 @@ def solution(food_times, k):
     for i in range(len(food_times)):
         if food_times[i] < answer:
             continue
-        else:
-            k -= 1
+        k -= 1
         if k < 0:
             return i + 1
-    else:
-        for i in range(len(food_times)):
-            if food_times[i] < answer + 1:
-                continue
-            else:
-                k -= 1
-            if k < 0:
-                return i + 1
-
-
-print(solution([3, 1, 2], 5))
-
-# def solution(food_times, k):
-#     result = 0
-#     cnt = 0
-#     while(True):
-#         if food_times[cnt] == 0:
-#             cnt = (cnt+1) % len(food_times)
-#             continue
-#         if(k == 0):
-#             break
-#         food_times[cnt] -= 1
-#         k -= 1
-#         cnt = (cnt+1) % len(food_times)
-#     return cnt+1
